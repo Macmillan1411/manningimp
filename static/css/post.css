@@ -1,0 +1,65 @@
+
+/* Custom styles */
+body {
+  font-family: 'Roboto', sans-serif; /* Change to your preferred font */
+}
+.hero {
+ /* background-image: url('https://via.placeholder.com/1500x500');  Replace with your hero image */
+ 
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.article {
+  margin-top: 50px;
+}
+.article h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.article h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.article p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.article ul {
+  margin-bottom: 20px;
+}
+.article li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.article img {
+width: 100%; /* Set the width to fill the container */
+height: 100%; /* Maintain the aspect ratio */
+max-width: 100%; /* Ensure images don't exceed their original size */
+display: block; /* Ensure images don't have any extra space around them */
+margin-bottom: 20px; /* Add margin to separate images */
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.article-meta {
+    margin-bottom: 20px; /* Add some spacing below the meta information */
+}
+
+.meta-info {
+    font-size: 14px; /* Set the font size for the meta information */
+    color: #999; /* Set a subdued color for the meta information */
+}

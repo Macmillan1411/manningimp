@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load custom_filters %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <article>
+        <header class='article-meta'>
+          <!--<h2>{{ blog.title }}</h2>-->
+          <p class='meta-info'>Опубликовано {{ blog.created }}</p>
+        </header>
+        <div>
+          {% for content in blog_content %}
+            {% if content.element_type == 'heading' %}
+              <h3>{{ content.text }}</h3>
+            {% elif content.element_type == 'paragraph' %}
+              <p>{{ content.text }}</p>
+           <!--list content-->
+           {% elif content.element_type == 'list' %}
+            <ul>
+                {% for item in content.text|split_by_newline %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+             </ul>
+        
+            {% elif content.element_type == 'image' %}
+              <img src="{{ content.image.url }}" alt="{{ blog.title }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+      </article>
+    </div>
+  </div>
+{% endblock %}
