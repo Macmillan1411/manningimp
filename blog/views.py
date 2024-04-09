@@ -4,7 +4,7 @@ from .models import Blog,BlogContent
 
 # Create your views here.
 def home(request):
-    blog = Blog.objects.get(id = 3)
+    blog = get_object_or_404(Blog, id = 4)
       # Fetch the related BlogContent objects for the blog
       # Fetch the related BlogContent objects for the blog instance
     blog_content = blog.content.all()
